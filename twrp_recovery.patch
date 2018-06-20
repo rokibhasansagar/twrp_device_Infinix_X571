@@ -1,0 +1,64 @@
+diff --git a/data.cpp b/data.cpp
+index 4dfbde2..fea5ea7 100644
+--- a/data.cpp
++++ b/data.cpp
+@@ -577,9 +577,9 @@ void DataManager::SetDefaultValues()
+ 	mConst.SetValue("false", "0");
+ 
+ 	mConst.SetValue(TW_VERSION_VAR, TW_VERSION_STR);
+-	mPersist.SetValue("tw_button_vibrate", "80");
++	mPersist.SetValue("tw_button_vibrate", "40");
+ 	mPersist.SetValue("tw_keyboard_vibrate", "40");
+-	mPersist.SetValue("tw_action_vibrate", "160");
++	mPersist.SetValue("tw_action_vibrate", "240");
+ 
+ 	TWPartition *store = PartitionManager.Get_Default_Storage_Partition();
+ 	if (store)
+@@ -729,15 +729,15 @@ void DataManager::SetDefaultValues()
+ 	mPersist.SetValue(TW_DISABLE_FREE_SPACE_VAR, "0");
+ 	mPersist.SetValue(TW_FORCE_DIGEST_CHECK_VAR, "0");
+ 	mPersist.SetValue(TW_USE_COMPRESSION_VAR, "0");
+-	mPersist.SetValue(TW_TIME_ZONE_VAR, "CST6CDT,M3.2.0,M11.1.0");
+-	mPersist.SetValue(TW_GUI_SORT_ORDER, "1");
++	mPersist.SetValue(TW_TIME_ZONE_VAR, "SAUST-3");
++	mPersist.SetValue(TW_GUI_SORT_ORDER, "0");
+ 	mPersist.SetValue(TW_RM_RF_VAR, "0");
+ 	mPersist.SetValue(TW_SKIP_DIGEST_CHECK_VAR, "0");
+ 	mPersist.SetValue(TW_SKIP_DIGEST_GENERATE_VAR, "0");
+ 	mPersist.SetValue(TW_SDEXT_SIZE, "0");
+ 	mPersist.SetValue(TW_SWAP_SIZE, "0");
+ 	mPersist.SetValue(TW_SDPART_FILE_SYSTEM, "ext3");
+-	mPersist.SetValue(TW_TIME_ZONE_GUISEL, "CST6;CDT,M3.2.0,M11.1.0");
++	mPersist.SetValue(TW_TIME_ZONE_GUISEL, "SAUST-3;SAUDT");
+ 	mPersist.SetValue(TW_TIME_ZONE_GUIOFFSET, "0");
+ 	mPersist.SetValue(TW_TIME_ZONE_GUIDST, "1");
+ 	mData.SetValue(TW_ACTION_BUSY, "0");
+@@ -754,7 +754,7 @@ void DataManager::SetDefaultValues()
+ 	mData.SetValue("tw_terminal_state", "0");
+ 	mData.SetValue("tw_background_thread_running", "0");
+ 	mData.SetValue(TW_RESTORE_FILE_DATE, "0");
+-	mPersist.SetValue("tw_military_time", "0");
++	mPersist.SetValue("tw_military_time", "1");
+ 
+ #ifdef TW_INCLUDE_CRYPTO
+ 	mConst.SetValue(TW_USE_SHA2, "1");
+@@ -824,7 +824,7 @@ void DataManager::SetDefaultValues()
+ #endif
+ 		mConst.SetValue("tw_brightness_max", maxBrightness);
+ 		mPersist.SetValue("tw_brightness", maxBrightness);
+-		mPersist.SetValue("tw_brightness_pct", "100");
++		mPersist.SetValue("tw_brightness_pct", "70");
+ #ifdef TW_SECONDARY_BRIGHTNESS_PATH
+ 		string secondfindbright = EXPAND(TW_SECONDARY_BRIGHTNESS_PATH);
+ 		if (secondfindbright != "" && TWFunc::Path_Exists(secondfindbright)) {
+@@ -890,8 +890,8 @@ void DataManager::SetDefaultValues()
+ 	mConst.SetValue("tw_oem_build", "1");
+ #else
+ 	mConst.SetValue("tw_oem_build", "0");
+-	mPersist.SetValue("tw_app_prompt", "1");
+-	mPersist.SetValue("tw_app_install_system", "1");
++	mPersist.SetValue("tw_app_prompt", "0");
++	mPersist.SetValue("tw_app_install_system", "0");
+ 	mData.SetValue("tw_app_install_status", "0"); // 0 = no status, 1 = not installed, 2 = already installed
+ #endif
+ 
