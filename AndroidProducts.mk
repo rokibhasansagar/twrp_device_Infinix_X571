@@ -21,5 +21,4 @@
 # are responsible for having their own logic, for fine-grained control.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/device_X571.mk \
-    $(LOCAL_DIR)/lineage.mk
+    $(LOCAL_DIR)/omni_X571.mk

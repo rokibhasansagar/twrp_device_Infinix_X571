@@ -1,2 +1,2 @@
-#used to add device to CM's lunch
-add_lunch_combo lineage_X571-eng
+#omni lunch combo for x571
+add_lunch_combo omni_X571-eng
